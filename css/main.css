@@ -1,0 +1,499 @@
+/* Start Global Section */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-color: #37517e;
+  --second-color: #47b2e4;
+  --section-color: #f3f5fa;
+  --box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
+}
+
+:focus {
+  box-shadow: none !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h2,
+h3,
+h4 {
+  color: var(--main-color);
+}
+
+/* End Global Section */
+
+/* Start Heading title */
+.heading h2:after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  width: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  background-color: #ccc;
+}
+
+.heading h2::before {
+  content: "";
+  position: absolute;
+  bottom: -21px;
+  width: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  background-color: var(--second-color);
+  z-index: 1;
+}
+
+/* End Heading title */
+
+/* Start Navbar */
+.navbar {
+  background-color: var(--main-color);
+}
+
+.navbar button.navbar-toggler {
+  color: #fff;
+}
+
+.navbar .navbar-nav .nav-item {
+  padding: 7px;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+  color: #fff;
+}
+
+.navbar .navbar-nav .nav-item .nav-link.active,
+.navbar .navbar-nav .nav-item .nav-link:focus,
+.navbar .navbar-nav .nav-item .nav-link:hover {
+  color: var(--second-color);
+}
+
+.navbar .navbar-nav .nav-item .nav-link.nav-button {
+  border: 2px solid var(--second-color);
+  padding: 7px 20px;
+  transition: all 1s;
+}
+
+.navbar .navbar-nav .nav-item .nav-link.nav-button:hover {
+  background-color: var(--second-color);
+  color: #fff;
+}
+
+/* End Navbar */
+/* Start Hero Section */
+.hero-section {
+  background-color: var(--main-color);
+  min-height: calc(100vh - 250px);
+}
+
+.hero-section .hero-image img {
+  width: 100%;
+  animation: heroimg 2s infinite linear alternate-reverse;
+}
+
+@keyframes heroimg {
+  0% {
+    transform: translatey(0);
+  }
+  100% {
+    transform: translatey(10px);
+  }
+}
+
+.hero-section .col-lg-6 .buttons .button {
+  padding: 7px 30px;
+  border: 2px solid var(--second-color);
+  background-color: var(--second-color);
+  transition: all 1s;
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    height: calc(100vh - 70px);
+  }
+  .hero-section .row {
+    height: 80vh;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+  .hero-section .col-lg-6 .buttons a {
+    display: block;
+    width: fit-content;
+    margin: 20px 0;
+  }
+  .hero-section .hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-section .hero-image img {
+    width: 50%;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+  .hero-section {
+    height: calc(100vh - 70px);
+  }
+  .hero-section .row {
+    height: 80vh;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+  .hero-section .hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-section .hero-image img {
+    width: 50%;
+  }
+}
+
+/* End Hero Section */
+/* Start Client Section */
+.client {
+  background-color: var(--section-color);
+}
+
+.client .row div {
+  margin: 10px 0;
+}
+
+.client img {
+  width: 50%;
+  filter: grayscale(100);
+}
+
+.client img:hover {
+  filter: grayscale(0);
+}
+/* End Client Section */
+/* Start About Section */
+/* End About Section */
+/* Start Why Us Section */
+.why-us {
+  background-color: var(--section-color);
+}
+
+.why-us .accordion h2 button {
+  font-weight: bold;
+}
+
+.why-us .accordion h2 button:hover {
+  color: var(--second-color);
+}
+
+.why-us .accordion h2 span {
+  color: var(--second-color);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* End Why Us Section */
+/* Start Skills Section */
+.skills .progress {
+  border-radius: 0;
+  height: 10px;
+}
+
+.skills .progress .progress-bar {
+  background-color: var(--main-color);
+}
+/* End Skills Section */
+
+/* Start Services Section */
+.services {
+  background-color: var(--section-color);
+}
+
+.services .box .icon svg {
+  color: var(--second-color);
+}
+
+.services .box {
+  margin: 10px 0;
+  box-shadow: var(--box-shadow);
+  transition: all 1s;
+}
+
+.services .box:hover {
+  transform: translatey(-10px);
+}
+
+.services .box h3 {
+  font-size: 20px;
+}
+/* End Services Section */
+/* Start CTA Section */
+.cta {
+  background-image: url("../images/cta-bg.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.8;
+  min-height: 300px;
+}
+
+.cta .overlay {
+  background-color: var(--main-color);
+  opacity: 0.8;
+}
+
+.cta .row {
+  height: 300px;
+}
+
+/* End CTA Section */
+
+/* Start Portfolio Section */
+.portfolio .portfolio-iamge {
+  overflow: hidden;
+}
+
+.portfolio .portfolio-iamge img {
+  width: 100%;
+  transition: all 1s;
+}
+
+.portfolio .portfolio-iamge img:hover {
+  transform: scale(1.1);
+}
+/* End Portfolio Section */
+/* Start Team Section */
+.team {
+  background-color: var(--section-color);
+}
+
+.team .box-card {
+  box-shadow: var(--box-shadow);
+  transition: all 1s;
+}
+
+.team .box-card:hover {
+  transform: translateY(-10px);
+}
+
+.team .box-card .iamge-team img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.team .box-card .content-team span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 1px;
+  background-color: #cbd6e9;
+}
+
+.team .box-card .content-team ul li {
+  background-color: var(--section-color);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+}
+
+.team .box-card .content-team ul li:hover {
+  background-color: var(--second-color);
+}
+
+.team .box-card .content-team ul li svg {
+  color: var(--main-color);
+}
+
+.team .box-card .content-team ul li:hover svg {
+  color: #fff;
+}
+/* End Team Section */
+/* Start Pricing Section */
+.pricing .plan-box {
+  box-shadow: var(--box-shadow);
+  border-radius: 10px;
+}
+
+.pricing .plan-box h4 span:last-child {
+  color: var(--second-color);
+}
+
+.pricing .plan-box .plan-list li {
+  margin: 20px 0;
+}
+
+.pricing .plan-box .plan-list li svg {
+  color: #28a745;
+  margin-right: 5px;
+}
+
+.pricing .plan-box .btn-plan {
+  padding: 10px 30px;
+  border: 1px solid var(--second-color);
+  transition: all 1s;
+  color: var(--second-color);
+}
+
+.pricing .plan-box .btn-plan:hover,
+.pricing .plan-box .btn-plan-active {
+  background-color: var(--second-color);
+  color: #fff;
+  padding: 10px 30px;
+}
+
+/* End Pricing Section */
+/* Start Asked Section */
+.asked {
+  background-color: var(--section-color);
+}
+
+.asked .accordion .accordion-item {
+  border: 0;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.asked .accordion .accordion-item .accordion-header .accordion-button {
+  background-color: #fff;
+  color: var(--main-color);
+  transition: all 1s;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.asked .accordion .accordion-item .accordion-header .accordion-button svg {
+  color: var(--second-color);
+  font-size: 20px;
+}
+
+.asked .accordion .accordion-item .accordion-header .accordion-button:hover {
+  color: var(--second-color);
+}
+
+/* End Asked Section */
+
+/* Start Contact Section */
+.contact .contact-info,
+.contact .form-contact {
+  border-top: 4px solid var(--second-color);
+  border-bottom: 4px solid var(--second-color);
+  box-shadow: var(--box-shadow);
+}
+
+.contact .contact-info .info .list .content-text p {
+  color: var(--main-color);
+}
+
+.contact .contact-info .info .list .icon {
+  background-color: #e7f5fb;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  transition: all 1s;
+}
+
+.contact .contact-info .info .list .icon svg {
+  color: var(--second-color);
+}
+
+.contact .contact-info .info .list:hover .icon {
+  background-color: var(--second-color);
+}
+
+.contact .contact-info .info .list:hover .icon svg {
+  color: #fff;
+}
+
+.contact .form-contact form textarea {
+  height: 240px;
+}
+
+.contact .form-contact form .btn-submit {
+  background-color: var(--second-color);
+}
+
+/* End Contact Section */
+
+/* Start Footer Section */
+/* Start NewsLetter Section */
+footer .newsLetter {
+  background-color: var(--section-color);
+}
+
+footer .newsLetter form .form {
+  border-radius: 20px;
+  box-shadow: var(--box-shadow);
+  width: fit-content;
+}
+
+footer .newsLetter form input {
+  width: 50%;
+  border-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  outline: none;
+}
+
+footer .newsLetter form .btn-subscribe {
+  background-color: var(--second-color);
+}
+
+/* End NewsLetter Section */
+/* Start Footer Navgation Section */
+footer .footer-nav .footer-navlink li svg {
+  color: var(--second-color);
+  font-size: 10px;
+}
+
+footer .footer-nav .social-link li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background-color: var(--second-color);
+}
+
+footer .footer-nav .social-link li:hover {
+  background-color: #209dd8;
+}
+
+footer .footer-nav .social-link li a svg {
+  color: #fff;
+}
+/* End Footer NAvgation Section */
+/* Start End Footer */
+footer .end-footer {
+  background-color: var(--main-color);
+}
+footer .end-footer .special {
+  color: var(--second-color);
+}
+
+/* End End Footer */
+/* End Footer Section */
+
+/*
+  ====================================================================================================================
+  Finsh Template Style
+  ====================================================================================================================
+*/
