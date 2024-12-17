@@ -92,11 +92,7 @@ h4 {
   transition: all 1s;
 }
 @media (max-width: 576px) {
-  .hero-section {
-    height: calc(100vh - 70px);
-  }
   .hero-section .row {
-    height: 80vh;
     flex-direction: column-reverse;
     justify-content: space-between;
   }
@@ -115,14 +111,6 @@ h4 {
   }
 }
 @media (min-width: 577px) and (max-width: 991px) {
-  .hero-section {
-    height: calc(100vh - 70px);
-  }
-  .hero-section .row {
-    height: 80vh;
-    flex-direction: column-reverse;
-    justify-content: space-between;
-  }
   .hero-section .hero-image {
     display: flex;
     justify-content: center;
